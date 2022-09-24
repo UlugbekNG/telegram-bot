@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Grid, Box, Typography } from "@mui/material";
+import { Button, Grid, Box } from "@mui/material";
 
 export default function BasicButtons() {
   return (
