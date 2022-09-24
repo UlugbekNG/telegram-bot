@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button, Grid, Box } from "@mui/material";
+import { Button, Grid, Box, Typography } from "@mui/material";
 import { groups } from "../../data/data";
 
 export default function MainScreen() {
@@ -11,9 +11,21 @@ export default function MainScreen() {
           backgroundColor: "#323232",
           minHeight: "100vh",
           padding: 1,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
         }}
       >
-        <Grid container spacing={1}>
+        <Typography
+          variant="overline"
+          textAlign="center"
+          color="white"
+          gutterBottom
+        >
+          Расписание занятий от 24.09.2022
+        </Typography>
+        <Grid container spacing={2}>
           {groups.map((group) => (
             <Grid key={group.id} item xs={6} sm={6} md={4} lg={3}>
               <Button
@@ -25,7 +37,9 @@ export default function MainScreen() {
                   padding: "15% 40%",
                 }}
               >
-                {group.name}
+                <Typography variant="h5" display="block">
+                  {group.name}
+                </Typography>
               </Button>
             </Grid>
           ))}
